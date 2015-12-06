@@ -1,0 +1,12 @@
+doctype html
+html(lang='en', ng-app='myApp')
+  head
+    title!= title
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+
+    link(rel='stylesheet', href='/css/style.css')
+  body(ng-controller='WelcomeCtrl')
+    h1 My Awesome App
+    p {{testVar}}
+    
+    script(src='/js/script.js')
