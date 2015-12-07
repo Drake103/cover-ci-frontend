@@ -1,0 +1,28 @@
+[
+  {
+    "changelist": "432464",
+    "owner": {
+      "id": 1,
+      "name": "John Doe"
+    },
+    "timeStarted": "new Date()",
+    "status": "Pending",
+    "steps": [
+      {
+        "type": "build",
+        "status": "Passed",
+        "percentage": 100
+      },
+      {
+        "type": "unitTests",
+        "status": "Passed",
+        "percentage": 100
+      },
+      {
+        "type": "functionalTests",
+        "status": "Pending",
+        "percentage": 50
+      }
+    ]
+  }
+]
