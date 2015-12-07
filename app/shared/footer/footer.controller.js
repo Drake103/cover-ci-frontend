@@ -1,8 +1,8 @@
-class WelcomeCtrl {
+class FooterController {
   constructor($scope) {
     $scope.testVar = 'We are up and running from a required module!';
   }
 }
 
-WelcomeCtrl.$inject = ['$scope'];
-export default WelcomeCtrl;
+FooterController.$inject = ['$scope'];
+export default FooterController;

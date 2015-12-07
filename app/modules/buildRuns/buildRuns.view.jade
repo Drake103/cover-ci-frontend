@@ -1,0 +1,11 @@
+div(ng-controller='BuildRunsController')
+  table.table-minimal
+    tr
+      th
+      th Changelist
+      th Owner
+    tr(ng-repeat='(key, buildRun) in runs', class='row')
+      td(class='ccf-run-status')
+      td {{buildRun.changelist}}
+      td {{buildRun.owner.name}}
+  

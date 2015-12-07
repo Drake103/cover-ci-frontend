@@ -1,0 +1,15 @@
+
+<div ng-controller="BuildRunsController">
+  <table class="table-minimal">
+    <tr>
+      <th></th>
+      <th>Changelist</th>
+      <th>Owner</th>
+    </tr>
+    <tr ng-repeat="(key, buildRun) in runs" class="row">
+      <td class="ccf-run-status"></td>
+      <td>{{buildRun.changelist}}</td>
+      <td>{{buildRun.owner.name}}</td>
+    </tr>
+  </table>
+</div>

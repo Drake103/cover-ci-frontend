@@ -17,6 +17,7 @@ var autoprefixer = require('gulp-autoprefixer');
 var concat = require('gulp-concat');
 var gulpFilter = require('gulp-filter');
 var bourbon = require('node-bourbon');
+var neat = require('node-neat');
 
 var SYMLINKS = {
   //config: './config > node_modules',
@@ -35,7 +36,6 @@ gulp.task('symlink', function() {
   }
 });
 
-// Static server
 gulp.task('browser-sync', function() {
   browserSync.init({
     server: {
@@ -46,15 +46,13 @@ gulp.task('browser-sync', function() {
 
 gulp.task('sass:build', function() {
 
-  var filter = gulpFilter(['*.css', '!*.map']);
-
   gulp.src('./styles/**/*.scss')
     .pipe(plumber())
-    .pipe(sass({ includePaths: bourbon.includePaths }).on('error', browserSync.notify))
     .pipe(sourcemaps.init())
+    .pipe(sass.sync({ includePaths: neat.includePaths }).on('error', sass.logError))
     .pipe(autoprefixer())
     .pipe(concat('style.css'))
-    .pipe(sourcemaps.write(), { includeContent: false })
+    .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('./public/css'));
 });
 
