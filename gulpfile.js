@@ -18,6 +18,7 @@ var concat = require('gulp-concat');
 var gulpFilter = require('gulp-filter');
 var bourbon = require('node-bourbon');
 var neat = require('node-neat');
+var express = require('express');
 
 var SYMLINKS = {
   //config: './config > node_modules',
@@ -44,6 +45,17 @@ gulp.task('browser-sync', function() {
   });
 });
 
+gulp.task('static-server', function() {
+  var app = express();
+  app.use(express.static('./public'));
+  var server = app.listen(3000, function() {
+    var host = server.address().address;
+    var port = server.address().port;
+
+    console.log('Example app listening at http://%s:%s', host, port);
+  });
+});
+
 gulp.task('sass:build', function() {
 
   gulp.src('./styles/**/*.scss')
@@ -58,6 +70,11 @@ gulp.task('sass:build', function() {
 
 gulp.task('sass:watch', function() {
   gulp.watch('./styles/**/*.scss', ['sass:build']);
+});
+
+gulp.task('fonts', function() {
+  return gulp.src('node_modules/font-awesome/fonts/*')
+    .pipe(gulp.dest('public/fonts'));
 });
 
 gulp.task('images:build', function() {
@@ -112,6 +129,6 @@ gulp.task('jade:watch', function() {
 
 gulp.task('watch', ['images:watch', 'js:watch', 'sass:watch', 'jade:watch']);
 
-gulp.task('default', ['images:build', 'js:build', 'sass:build', 'jade:build']);
+gulp.task('default', ['images:build', 'js:build', 'sass:build', 'jade:build', 'fonts']);
 
-gulp.task('serve', ['default', 'browser-sync', 'watch']);
+gulp.task('serve', ['default', 'static-server', 'watch']);

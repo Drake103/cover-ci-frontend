@@ -1,1 +1,17 @@
-@import 'bourbon';
+@charset "utf-8";
+
+@import "bourbon";
+@import "neat";
+
+@include font-face("Open Sans", "/fonts/opensans/opensans-regular", $file-formats: ttf);
+
+$open-sans: "Open Sans", Tahoma, Verdana, Arial, sans-serif;
+
+$fa_path: "../node_modules/font-awesome/scss";
+@import "../node_modules/font-awesome/scss/font-awesome.scss";
+
+
+
+body {
+  font-family: $open-sans
+}

@@ -1,28 +1,186 @@
-[
-  {
-    "changelist": "432464",
-    "owner": {
-      "id": 1,
-      "name": "John Doe"
+{
+  "runs": [
+    {
+      "changelist": "432464",
+      "owner": {
+        "id": 1,
+        "name": "John Doe"
+      },
+      "timeStarted": 1449835200,
+      "status": "Pending",
+      "steps": [
+        {
+          "type": "build",
+          "status": "Passed",
+          "percentage": 100
+        },
+        {
+          "type": "unitTests",
+          "status": "Passed",
+          "percentage": 100
+        },
+        {
+          "type": "functionalTests",
+          "status": "Pending",
+          "percentage": 50
+        }
+      ]
     },
-    "timeStarted": "new Date()",
-    "status": "Pending",
-    "steps": [
-      {
-        "type": "build",
-        "status": "Passed",
-        "percentage": 100
+    {
+      "changelist": "432464",
+      "owner": {
+        "id": 1,
+        "name": "John Doe"
       },
-      {
-        "type": "unitTests",
-        "status": "Passed",
-        "percentage": 100
+      "timeStarted": 1449835200,
+      "status": "Pending",
+      "steps": [
+        {
+          "type": "build",
+          "status": "Passed",
+          "percentage": 100
+        },
+        {
+          "type": "unitTests",
+          "status": "Passed",
+          "percentage": 100
+        },
+        {
+          "type": "functionalTests",
+          "status": "Pending",
+          "percentage": 50
+        }
+      ]
+    },
+    {
+      "changelist": "432464",
+      "owner": {
+        "id": 1,
+        "name": "John Doe"
       },
-      {
-        "type": "functionalTests",
-        "status": "Pending",
-        "percentage": 50
-      }
-    ]
-  }
-]
+      "timeStarted": 1449835200,
+      "status": "Pending",
+      "steps": [
+        {
+          "type": "build",
+          "status": "Passed",
+          "percentage": 100
+        },
+        {
+          "type": "unitTests",
+          "status": "Passed",
+          "percentage": 100
+        },
+        {
+          "type": "functionalTests",
+          "status": "Pending",
+          "percentage": 50
+        }
+      ]
+    },
+    {
+      "changelist": "432464",
+      "owner": {
+        "id": 1,
+        "name": "John Doe"
+      },
+      "timeStarted": 1449835200,
+      "status": "Pending",
+      "steps": [
+        {
+          "type": "build",
+          "status": "Passed",
+          "percentage": 100
+        },
+        {
+          "type": "unitTests",
+          "status": "Passed",
+          "percentage": 100
+        },
+        {
+          "type": "functionalTests",
+          "status": "Pending",
+          "percentage": 50
+        }
+      ]
+    },
+    {
+      "changelist": "432464",
+      "owner": {
+        "id": 1,
+        "name": "John Doe"
+      },
+      "timeStarted": 1449835200,
+      "status": "Pending",
+      "steps": [
+        {
+          "type": "build",
+          "status": "Passed",
+          "percentage": 100
+        },
+        {
+          "type": "unitTests",
+          "status": "Passed",
+          "percentage": 100
+        },
+        {
+          "type": "functionalTests",
+          "status": "Pending",
+          "percentage": 50
+        }
+      ]
+    },
+    {
+      "changelist": "432464",
+      "owner": {
+        "id": 1,
+        "name": "John Doe"
+      },
+      "timeStarted": 1449835200,
+      "status": "Pending",
+      "steps": [
+        {
+          "type": "build",
+          "status": "Passed",
+          "percentage": 100
+        },
+        {
+          "type": "unitTests",
+          "status": "Passed",
+          "percentage": 100
+        },
+        {
+          "type": "functionalTests",
+          "status": "Pending",
+          "percentage": 50
+        }
+      ]
+    },
+    {
+      "changelist": "432464",
+      "owner": {
+        "id": 1,
+        "name": "John Doe"
+      },
+      "timeStarted": 1449835200,
+      "status": "Pending",
+      "steps": [
+        {
+          "type": "build",
+          "status": "Passed",
+          "percentage": 100
+        },
+        {
+          "type": "unitTests",
+          "status": "Passed",
+          "percentage": 100
+        },
+        {
+          "type": "functionalTests",
+          "status": "Pending",
+          "percentage": 50
+        }
+      ]
+    }
+  ]
+}

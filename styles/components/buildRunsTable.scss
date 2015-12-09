@@ -1,73 +1,177 @@
 @import 'bourbon';
 @import 'neat';
+@import '../mixins/positioning';
 
-.table-minimal {
+$status-default-color: rgb(210, 210, 210);
+$status-pending-color: rgb(248, 172, 89);
+$status-running-color: rgb(28, 132, 198);
+$status-passed-color: rgb(26, 179, 148);
+$status-failed-color: rgb(237, 85, 101);
+
+.cci-status-failed {
+  border-left-color: $status-failed-color !important;
+}
+
+ul.cci-br-ul {
+  list-style: none;
+
   $base-border-color: gainsboro !default;
-  $base-border-radius: 3px !default;
   $base-background-color: white !default;
-  $base-line-height: 1.5em !default;
-  $base-spacing: 1.5em !default;
-  $action-color: #477DCA !default;
-  $dark-gray: #333 !default;
-  $light-gray: #DDD !default;
-  $medium-screen: em(640) !default;
-  $large-screen: em(860) !default;
-  $base-font-color: $dark-gray !default;
-  $table-border-color: $base-border-color;
-  $table-border: 1px solid $table-border-color;
   $table-background: $base-background-color;
   $table-header-background: lighten($table-background, 10);
   $table-hover-background: darken($table-background, 2);
-  $table-stripe-background: darken($table-background, 4);
-  $table-stripe-background-hover: darken($table-stripe-background, 5);
-  $table-padding: .75em 1em;
+  $dark-gray: #444 !default;
+  $base-font-color: $dark-gray !default;
+  $base-font-size: 12px;
+  $header-font-size: 13px;
+  $header-font-weight: bolder;
+  $header-row-height: 48px;
+  $row-height: 64px;
 
-  border-collapse: separate;
-  border-spacing: 0;
-  width: 100%;
+  @include outer-container;
 
-  tbody {
-    tr:hover > td, tr:hover > th {
-      background-color: $table-hover-background;
-    }
-    tr:first-child td {
-      border-top: 2px solid $table-border-color;
-    }
-  }
+  color: $base-font-color;
 
-  thead {
-    th {
-      background-color: $table-header-background;
-      border-bottom: 0px;
-      padding: $table-padding;
-      text-align: left;
-    }
-  }
+  li.cci-br-li {
+    @include clearfix;
+    text-align: left;
+    margin: 0;
 
-  tbody {
+    border: none;
+    border: 1px solid $base-border-color;
     background-color: $table-background;
+    border-bottom-width: 0;
 
-    td {
-      border-bottom: 0px;
-      border-top: 1px solid $table-border-color;
-      line-height: $base-line-height;
-      padding: $table-padding;
+    border-left-color: $base-border-color;
+    border-left-width: 10px;
 
-      button {
-        display: inline-block;
-        font-size: .7em;
-        line-height: $base-line-height;
-        margin-bottom: .3em;
-        margin-right: 0.5em;
-        outline: none;
-        padding: .3em 1em;
-        width: 100%;
+    font-size: $base-font-size;
 
-        @include media($medium-screen) {
-          margin-bottom: 0;
-          width: auto;
+    &:last-child {
+      border-bottom-width: 1px;
+    }
+
+    &.cci-br-header {
+      font-weight: $header-font-weight;
+      font-size: $header-font-size;
+
+      div.cci-br-common-header {
+        @include span-columns(10.5);
+        height: $header-row-height;
+
+        div {
+          padding: 5px;
+
+          &:nth-child(1) {
+            @include span-columns(2);
+          }
+          &:nth-child(2) {
+            @include span-columns(1.5);
+          }
+          &:nth-child(3) {
+            @include span-columns(2.5);
+          }
+          &:nth-child(4) {
+            @include span-columns(2);
+          }
+          &:nth-child(5) {
+            @include span-columns(2);
+          }
+          &:nth-child(6) {
+            @include span-columns(2);
+          }
+        }
+      }
+
+      div.cci-br-status-header {
+        @include span-columns(1.5);
+        height: $header-row-height;
+
+        div {
+          padding: 5px;
+          @include span-columns(12);
         }
       }
     }
+
+    div.cci-br-common {
+      @include span-columns(10.5);
+      @include clearfix;
+
+      div.cci-br-summary {
+        height: $row-height;
+        div {
+          @include vertical-align();
+          padding: 5px;
+
+          &:nth-child(1) {
+            @include span-columns(2);
+          }
+          &:nth-child(2) {
+            @include span-columns(1.5);
+          }
+          &:nth-child(3) {
+            @include span-columns(2.5);
+          }
+          &:nth-child(4) {
+            @include span-columns(6);
+          }
+
+          &.cci-br-step-info {
+            div.cci-br-step-wrapper {
+              display: inline-block;
+              width: 32px;
+              height: 32px;
+              background-color: grey;
+            }
+            div.cci-br-step-progress-wrapper {
+              display: inline-block;
+              height: 20px;
+              background-color: grey;
+            }
+          }
+        }
+      }
+
+      div.cci-br-detailed {
+        padding: 5px;
+        @include clearfix;
+
+        div {
+          &:nth-child(1) {
+            @include span-columns(3);
+          }
+          &:nth-child(2) {
+            @include span-columns(1);
+          }
+          &:nth-child(3) {
+            @include span-columns(3);
+          }
+          &:nth-child(4) {
+            @include span-columns(1);
+          }
+          &:nth-child(5) {
+            @include span-columns(4);
+          }
+        }
+      }
+    }
+
+    div.cci-br-status {
+      @include span-columns(1.5);
+      div.cci-br-summary {
+        height: $row-height;
+        div {
+          @include span-columns(12);
+        }
+      }
+
+      div.cci-br-detailed {
+        div {
+          @include span-columns(12);
+        }
+      }
+    }
+
   }
 }
