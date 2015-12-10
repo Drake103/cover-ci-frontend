@@ -2095,8 +2095,35 @@ html {
 *, *::after, *::before {
   box-sizing: inherit; }
 
-.cci-status-failed {
+.cci-li-status-default {
+  border-left-color: #d2d2d2 !important; }
+
+.cci-status-default {
+  color: #d2d2d2; }
+
+.cci-li-status-pending {
+  border-left-color: #f8ac59 !important; }
+
+.cci-status-pending {
+  color: #f8ac59; }
+
+.cci-li-status-running {
+  border-left-color: #1c84c6 !important; }
+
+.cci-status-running {
+  color: #1c84c6; }
+
+.cci-li-status-passed {
+  border-left-color: #1ab394 !important; }
+
+.cci-status-passed {
+  color: #1ab394; }
+
+.cci-li-status-failed {
   border-left-color: #ed5565 !important; }
+
+.cci-status-failed {
+  color: #ed5565; }
 
 ul.cci-br-ul {
   list-style: none;
@@ -2125,8 +2152,8 @@ ul.cci-br-ul {
     ul.cci-br-ul li.cci-br-li:last-child {
       border-bottom-width: 1px; }
     ul.cci-br-ul li.cci-br-li.cci-br-header {
-      font-weight: bolder;
-      font-size: 13px; }
+      font-size: 13px;
+      font-weight: bolder; }
       ul.cci-br-ul li.cci-br-li.cci-br-header div.cci-br-common-header {
         float: left;
         display: block;
@@ -2136,8 +2163,13 @@ ul.cci-br-ul {
         ul.cci-br-ul li.cci-br-li.cci-br-header div.cci-br-common-header:last-child {
           margin-right: 0; }
         ul.cci-br-ul li.cci-br-li.cci-br-header div.cci-br-common-header div {
-          padding: 5px; }
+          padding: 5px;
+          position: relative;
+          top: 50%;
+          -webkit-transform: translateY(-50%);
+          transform: translateY(-50%); }
           ul.cci-br-ul li.cci-br-li.cci-br-header div.cci-br-common-header div:nth-child(1) {
+            padding-left: 30px;
             float: left;
             display: block;
             margin-right: 2.35765%;
@@ -2189,12 +2221,10 @@ ul.cci-br-ul {
           margin-right: 0; }
         ul.cci-br-ul li.cci-br-li.cci-br-header div.cci-br-status-header div {
           padding: 5px;
-          float: left;
-          display: block;
-          margin-right: 2.35765%;
-          width: 100%; }
-          ul.cci-br-ul li.cci-br-li.cci-br-header div.cci-br-status-header div:last-child {
-            margin-right: 0; }
+          position: relative;
+          top: 50%;
+          -webkit-transform: translateY(-50%);
+          transform: translateY(-50%); }
     ul.cci-br-ul li.cci-br-li div.cci-br-common {
       float: left;
       display: block;
@@ -2209,12 +2239,13 @@ ul.cci-br-ul {
       ul.cci-br-ul li.cci-br-li div.cci-br-common div.cci-br-summary {
         height: 64px; }
         ul.cci-br-ul li.cci-br-li div.cci-br-common div.cci-br-summary div {
+          padding: 5px;
           position: relative;
           top: 50%;
           -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-          padding: 5px; }
+          transform: translateY(-50%); }
           ul.cci-br-ul li.cci-br-li div.cci-br-common div.cci-br-summary div:nth-child(1) {
+            padding-left: 30px;
             float: left;
             display: block;
             margin-right: 2.35765%;
@@ -2242,6 +2273,9 @@ ul.cci-br-ul {
             width: 48.82117%; }
             ul.cci-br-ul li.cci-br-li div.cci-br-common div.cci-br-summary div:nth-child(4):last-child {
               margin-right: 0; }
+          ul.cci-br-ul li.cci-br-li div.cci-br-common div.cci-br-summary div.cci-br-changelist-cell {
+            font-size: 13px;
+            font-weight: bolder; }
           ul.cci-br-ul li.cci-br-li div.cci-br-common div.cci-br-summary div.cci-br-step-info div.cci-br-step-wrapper {
             display: inline-block;
             width: 32px;
@@ -2251,12 +2285,12 @@ ul.cci-br-ul {
             display: inline-block;
             height: 20px;
             background-color: grey; }
-      ul.cci-br-ul li.cci-br-li div.cci-br-common div.cci-br-detailed {
+      ul.cci-br-ul li.cci-br-li div.cci-br-common div.cci-br-detailed::after {
+        clear: both;
+        content: "";
+        display: table; }
+      ul.cci-br-ul li.cci-br-li div.cci-br-common div.cci-br-detailed div {
         padding: 5px; }
-        ul.cci-br-ul li.cci-br-li div.cci-br-common div.cci-br-detailed::after {
-          clear: both;
-          content: "";
-          display: table; }
         ul.cci-br-ul li.cci-br-li div.cci-br-common div.cci-br-detailed div:nth-child(1) {
           float: left;
           display: block;
@@ -2297,24 +2331,46 @@ ul.cci-br-ul {
       display: block;
       margin-right: 2.35765%;
       width: 10.43705%; }
+      ul.cci-br-ul li.cci-br-li div.cci-br-status::after {
+        clear: both;
+        content: "";
+        display: table; }
       ul.cci-br-ul li.cci-br-li div.cci-br-status:last-child {
         margin-right: 0; }
       ul.cci-br-ul li.cci-br-li div.cci-br-status div.cci-br-summary {
         height: 64px; }
         ul.cci-br-ul li.cci-br-li div.cci-br-status div.cci-br-summary div {
+          position: relative;
+          top: 50%;
+          -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
           float: left;
           display: block;
           margin-right: 2.35765%;
           width: 100%; }
           ul.cci-br-ul li.cci-br-li div.cci-br-status div.cci-br-summary div:last-child {
             margin-right: 0; }
+          ul.cci-br-ul li.cci-br-li div.cci-br-status div.cci-br-summary div.cci-br-status-cell {
+            font-size: 13px;
+            font-weight: bolder; }
+        ul.cci-br-ul li.cci-br-li div.cci-br-status div.cci-br-summary span.fa {
+          font-size: 1.5em; }
       ul.cci-br-ul li.cci-br-li div.cci-br-status div.cci-br-detailed div {
+        position: relative;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
         float: left;
         display: block;
         margin-right: 2.35765%;
         width: 100%; }
         ul.cci-br-ul li.cci-br-li div.cci-br-status div.cci-br-detailed div:last-child {
           margin-right: 0; }
+        ul.cci-br-ul li.cci-br-li div.cci-br-status div.cci-br-detailed div.cci-br-status-cell {
+          font-size: 13px;
+          font-weight: bolder; }
+      ul.cci-br-ul li.cci-br-li div.cci-br-status div.cci-br-detailed span.fa {
+        font-size: 1.3em; }
 
 
 @charset "UTF-8";

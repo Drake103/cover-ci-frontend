@@ -8,8 +8,21 @@ $status-running-color: rgb(28, 132, 198);
 $status-passed-color: rgb(26, 179, 148);
 $status-failed-color: rgb(237, 85, 101);
 
-.cci-status-failed {
-  border-left-color: $status-failed-color !important;
+$status-colors-list: $status-default-color, $status-pending-color, $status-running-color, $status-passed-color, $status-failed-color;
+$statuses-list: "default", "pending", "running", "passed", "failed";
+
+@mixin cci-li-status($color){
+  border-left-color: $color !important;
+}
+
+@each $current-status in $statuses-list {
+    $i: index($statuses-list, $current-status);
+    .cci-li-status-#{$current-status} {
+      @include cci-li-status(nth($status-colors-list, $i));
+    }
+    .cci-status-#{$current-status} {
+      color: nth($status-colors-list, $i);
+    }
 }
 
 ul.cci-br-ul {
@@ -27,6 +40,15 @@ ul.cci-br-ul {
   $header-font-weight: bolder;
   $header-row-height: 48px;
   $row-height: 64px;
+
+  @mixin header-text {
+    font-size: $header-font-size;
+    font-weight: $header-font-weight;
+  }
+
+  @mixin cell-padding {
+    padding: 5px;
+  }
 
   @include outer-container;
 
@@ -52,17 +74,18 @@ ul.cci-br-ul {
     }
 
     &.cci-br-header {
-      font-weight: $header-font-weight;
-      font-size: $header-font-size;
+      @include header-text();
 
       div.cci-br-common-header {
         @include span-columns(10.5);
         height: $header-row-height;
 
         div {
-          padding: 5px;
+          @include cell-padding();
+          @include vertical-align();
 
           &:nth-child(1) {
+            padding-left: 30px;
             @include span-columns(2);
           }
           &:nth-child(2) {
@@ -88,8 +111,8 @@ ul.cci-br-ul {
         height: $header-row-height;
 
         div {
-          padding: 5px;
-          @include span-columns(12);
+          @include cell-padding();
+          @include vertical-align();
         }
       }
     }
@@ -101,10 +124,11 @@ ul.cci-br-ul {
       div.cci-br-summary {
         height: $row-height;
         div {
+          @include cell-padding();
           @include vertical-align();
-          padding: 5px;
 
           &:nth-child(1) {
+            padding-left: 30px;
             @include span-columns(2);
           }
           &:nth-child(2) {
@@ -115,6 +139,10 @@ ul.cci-br-ul {
           }
           &:nth-child(4) {
             @include span-columns(6);
+          }
+
+          &.cci-br-changelist-cell {
+            @include header-text();
           }
 
           &.cci-br-step-info {
@@ -134,10 +162,11 @@ ul.cci-br-ul {
       }
 
       div.cci-br-detailed {
-        padding: 5px;
         @include clearfix;
 
         div {
+          @include cell-padding();
+
           &:nth-child(1) {
             @include span-columns(3);
           }
@@ -158,17 +187,37 @@ ul.cci-br-ul {
     }
 
     div.cci-br-status {
+      @include clearfix;
       @include span-columns(1.5);
+      
       div.cci-br-summary {
         height: $row-height;
         div {
+          @include vertical-align();
           @include span-columns(12);
+
+          &.cci-br-status-cell {
+            @include header-text();
+          }
+        }
+
+        span.fa {
+          font-size: 1.5em;
         }
       }
 
       div.cci-br-detailed {
         div {
+          @include vertical-align();
           @include span-columns(12);
+
+          &.cci-br-status-cell {
+            @include header-text();
+          }
+        }
+
+        span.fa {
+          font-size: 1.3em;
         }
       }
     }

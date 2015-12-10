@@ -14,12 +14,12 @@
         <div>Status</div>
       </div>
     </li>
-    <li ng-repeat="(key, buildRun) in runs" ng-class="ctrl.getStatusClass(buildRun)" ng-click="ctrl.expand(buildRun)" class="cci-br-li">
+    <li ng-repeat="(key, buildRun) in runs" ng-class="ctrl.getStatusClassLi(buildRun.statusCode)" ng-click="ctrl.expand(buildRun)" class="cci-br-li">
       <div class="cci-br-common">
         <div class="cci-br-summary">
-          <div>{{buildRun.changelist}}</div>
+          <div class="cci-br-changelist-cell">{{buildRun.changelist}}</div>
           <div>{{buildRun.owner.name}}</div>
-          <div>{{buildRun.timeStarted  | date:'M / dd / yyyy @ h:mm a'}}</div>
+          <div>{{buildRun.timeStarted  | date:'M / dd / yyyy'}} <i class="fa fa-clock-o"></i> {{buildRun.timeStarted  | date:'h:mm a'}}</div>
           <div class="cci-br-step-info">
             <div class="cci-br-step-wrapper">x</div>
             <div class="cci-br-step-progress-wrapper">
@@ -80,11 +80,11 @@
         </div>
       </div>
       <div class="cci-br-status">
-        <div class="cci-br-summary">
-          <div>{{buildRun.status}}</div>
+        <div ng-hide="buildRun.isExpanded" class="cci-br-summary">
+          <div ng-class="ctrl.getStatusColorClass(buildRun.statusCode)" class="cci-br-status-cell"><span ng-class="ctrl.getStatusIconClass(buildRun.statusCode)" class="fa"></span> {{buildRun.statusName}}</div>
         </div>
-        <div class="cci-br-detailed">
-          <div>{{buildRun.status}}</div>
+        <div ng-show="buildRun.isExpanded" class="cci-br-detailed">
+          <div ng-class="ctrl.getStatusColorClass(buildRun.statusCode)" class="cci-br-status-cell"><span ng-class="ctrl.getStatusIconClass(buildRun.statusCode)" class="fa"></span> {{buildRun.statusName}}</div>
         </div>
       </div>
     </li>

@@ -4,180 +4,178 @@
       "changelist": "432464",
       "owner": {
         "id": 1,
-        "name": "John Doe"
+        "name": "JTuck"
       },
       "timeStarted": 1449835200,
-      "status": "Pending",
+      "statusCode": 1,
+      "statusName": "Pending",
       "steps": [
         {
           "type": "build",
-          "status": "Passed",
+          "statusCode": 3,
+          "statusName": "Passed",
           "percentage": 100
         },
         {
           "type": "unitTests",
-          "status": "Passed",
+          "statusCode": 3,
+          "statusName": "Passed",
           "percentage": 100
         },
         {
           "type": "functionalTests",
-          "status": "Pending",
+          "statusCode": 1,
+          "statusName": "Pending",
           "percentage": 50
         }
       ]
     },
     {
-      "changelist": "432464",
+      "changelist": "432463",
       "owner": {
-        "id": 1,
-        "name": "John Doe"
+        "id": 2,
+        "name": "Dora"
       },
       "timeStarted": 1449835200,
-      "status": "Pending",
+      "statusCode": 2,
+      "statusName": "Running",
       "steps": [
         {
           "type": "build",
-          "status": "Passed",
+          "statusCode": 3,
+          "statusName": "Passed",
           "percentage": 100
         },
         {
           "type": "unitTests",
-          "status": "Passed",
+          "statusCode": 3,
+          "statusName": "Passed",
           "percentage": 100
         },
         {
           "type": "functionalTests",
-          "status": "Pending",
+          "statusCode": 1,
+          "statusName": "Pending",
           "percentage": 50
         }
       ]
     },
     {
-      "changelist": "432464",
+      "changelist": "432462",
       "owner": {
-        "id": 1,
-        "name": "John Doe"
+        "id": 3,
+        "name": "Samy"
       },
       "timeStarted": 1449835200,
-      "status": "Pending",
+      "statusCode": 3,
+      "statusName": "Passed",
       "steps": [
         {
           "type": "build",
-          "status": "Passed",
+          "statusCode": 3,
+          "statusName": "Passed",
           "percentage": 100
         },
         {
           "type": "unitTests",
-          "status": "Passed",
+          "statusCode": 3,
+          "statusName": "Passed",
           "percentage": 100
         },
         {
           "type": "functionalTests",
-          "status": "Pending",
+          "statusCode": 1,
+          "statusName": "Pending",
           "percentage": 50
         }
       ]
     },
     {
-      "changelist": "432464",
+      "changelist": "432461",
       "owner": {
         "id": 1,
-        "name": "John Doe"
+        "name": "JTuck"
       },
       "timeStarted": 1449835200,
-      "status": "Pending",
+      "statusCode": 4,
+      "statusName": "Failed",
       "steps": [
         {
           "type": "build",
-          "status": "Passed",
+          "statusCode": 3,
+          "statusName": "Passed",
           "percentage": 100
         },
         {
           "type": "unitTests",
-          "status": "Passed",
+          "statusCode": 3,
+          "statusName": "Passed",
           "percentage": 100
         },
         {
           "type": "functionalTests",
-          "status": "Pending",
+          "statusCode": 1,
+          "statusName": "Pending",
           "percentage": 50
         }
       ]
     },
     {
-      "changelist": "432464",
+      "changelist": "432460",
       "owner": {
-        "id": 1,
-        "name": "John Doe"
+        "id": 3,
+        "name": "Samy"
       },
       "timeStarted": 1449835200,
-      "status": "Pending",
+      "statusCode": 3,
+      "statusName": "Passed",
       "steps": [
         {
           "type": "build",
-          "status": "Passed",
+          "statusCode": 3,
+          "statusName": "Passed",
           "percentage": 100
         },
         {
           "type": "unitTests",
-          "status": "Passed",
+          "statusCode": 3,
+          "statusName": "Passed",
           "percentage": 100
         },
         {
           "type": "functionalTests",
-          "status": "Pending",
+          "statusCode": 1,
+          "statusName": "Pending",
           "percentage": 50
         }
       ]
     },
     {
-      "changelist": "432464",
+      "changelist": "432459",
       "owner": {
-        "id": 1,
-        "name": "John Doe"
+        "id": 2,
+        "name": "Dora"
       },
       "timeStarted": 1449835200,
-      "status": "Pending",
+      "statusCode": 4,
+      "statusName": "Failed",
       "steps": [
         {
           "type": "build",
-          "status": "Passed",
+          "statusCode": 3,
+          "statusName": "Passed",
           "percentage": 100
         },
         {
           "type": "unitTests",
-          "status": "Passed",
+          "statusCode": 3,
+          "statusName": "Passed",
           "percentage": 100
         },
         {
           "type": "functionalTests",
-          "status": "Pending",
-          "percentage": 50
-        }
-      ]
-    },
-    {
-      "changelist": "432464",
-      "owner": {
-        "id": 1,
-        "name": "John Doe"
-      },
-      "timeStarted": 1449835200,
-      "status": "Pending",
-      "steps": [
-        {
-          "type": "build",
-          "status": "Passed",
-          "percentage": 100
-        },
-        {
-          "type": "unitTests",
-          "status": "Passed",
-          "percentage": 100
-        },
-        {
-          "type": "functionalTests",
-          "status": "Pending",
+          "statusCode": 1,
+          "statusName": "Pending",
           "percentage": 50
         }
       ]
