@@ -1,28 +1,184 @@
-[
-  {
-    "changelist": "432464",
-    "owner": {
-      "id": 1,
-      "name": "John Doe"
+{
+  "runs": [
+    {
+      "changelist": "432464",
+      "owner": {
+        "id": 1,
+        "name": "JTuck"
+      },
+      "timeStarted": 1449835200,
+      "statusCode": 1,
+      "statusName": "Pending",
+      "steps": [
+        {
+          "type": "build",
+          "statusCode": 3,
+          "statusName": "Passed",
+          "percentage": 100
+        },
+        {
+          "type": "unitTests",
+          "statusCode": 3,
+          "statusName": "Passed",
+          "percentage": 100
+        },
+        {
+          "type": "functionalTests",
+          "statusCode": 1,
+          "statusName": "Pending",
+          "percentage": 50
+        }
+      ]
     },
-    "timeStarted": "new Date()",
-    "status": "Pending",
-    "steps": [
-      {
-        "type": "build",
-        "status": "Passed",
-        "percentage": 100
+    {
+      "changelist": "432463",
+      "owner": {
+        "id": 2,
+        "name": "Dora"
       },
-      {
-        "type": "unitTests",
-        "status": "Passed",
-        "percentage": 100
+      "timeStarted": 1449835200,
+      "statusCode": 2,
+      "statusName": "Running",
+      "steps": [
+        {
+          "type": "build",
+          "statusCode": 3,
+          "statusName": "Passed",
+          "percentage": 100
+        },
+        {
+          "type": "unitTests",
+          "statusCode": 3,
+          "statusName": "Passed",
+          "percentage": 100
+        },
+        {
+          "type": "functionalTests",
+          "statusCode": 1,
+          "statusName": "Pending",
+          "percentage": 50
+        }
+      ]
+    },
+    {
+      "changelist": "432462",
+      "owner": {
+        "id": 3,
+        "name": "Samy"
       },
-      {
-        "type": "functionalTests",
-        "status": "Pending",
-        "percentage": 50
-      }
-    ]
-  }
-]
+      "timeStarted": 1449835200,
+      "statusCode": 3,
+      "statusName": "Passed",
+      "steps": [
+        {
+          "type": "build",
+          "statusCode": 3,
+          "statusName": "Passed",
+          "percentage": 100
+        },
+        {
+          "type": "unitTests",
+          "statusCode": 3,
+          "statusName": "Passed",
+          "percentage": 100
+        },
+        {
+          "type": "functionalTests",
+          "statusCode": 1,
+          "statusName": "Pending",
+          "percentage": 50
+        }
+      ]
+    },
+    {
+      "changelist": "432461",
+      "owner": {
+        "id": 1,
+        "name": "JTuck"
+      },
+      "timeStarted": 1449835200,
+      "statusCode": 4,
+      "statusName": "Failed",
+      "steps": [
+        {
+          "type": "build",
+          "statusCode": 3,
+          "statusName": "Passed",
+          "percentage": 100
+        },
+        {
+          "type": "unitTests",
+          "statusCode": 3,
+          "statusName": "Passed",
+          "percentage": 100
+        },
+        {
+          "type": "functionalTests",
+          "statusCode": 1,
+          "statusName": "Pending",
+          "percentage": 50
+        }
+      ]
+    },
+    {
+      "changelist": "432460",
+      "owner": {
+        "id": 3,
+        "name": "Samy"
+      },
+      "timeStarted": 1449835200,
+      "statusCode": 3,
+      "statusName": "Passed",
+      "steps": [
+        {
+          "type": "build",
+          "statusCode": 3,
+          "statusName": "Passed",
+          "percentage": 100
+        },
+        {
+          "type": "unitTests",
+          "statusCode": 3,
+          "statusName": "Passed",
+          "percentage": 100
+        },
+        {
+          "type": "functionalTests",
+          "statusCode": 1,
+          "statusName": "Pending",
+          "percentage": 50
+        }
+      ]
+    },
+    {
+      "changelist": "432459",
+      "owner": {
+        "id": 2,
+        "name": "Dora"
+      },
+      "timeStarted": 1449835200,
+      "statusCode": 4,
+      "statusName": "Failed",
+      "steps": [
+        {
+          "type": "build",
+          "statusCode": 3,
+          "statusName": "Passed",
+          "percentage": 100
+        },
+        {
+          "type": "unitTests",
+          "statusCode": 3,
+          "statusName": "Passed",
+          "percentage": 100
+        },
+        {
+          "type": "functionalTests",
+          "statusCode": 1,
+          "statusName": "Pending",
+          "percentage": 50
+        }
+      ]
+    }
+  ]
+}

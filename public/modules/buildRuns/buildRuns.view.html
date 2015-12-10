@@ -1,15 +1,92 @@
 
-<div ng-controller="BuildRunsController">
-  <table class="table-minimal">
-    <tr>
-      <th></th>
-      <th>Changelist</th>
-      <th>Owner</th>
-    </tr>
-    <tr ng-repeat="(key, buildRun) in runs" class="row">
-      <td class="ccf-run-status"></td>
-      <td>{{buildRun.changelist}}</td>
-      <td>{{buildRun.owner.name}}</td>
-    </tr>
-  </table>
+<div ng-controller="BuildRunsController as ctrl">
+  <ul class="cci-br-ul">
+    <li class="cci-br-li cci-br-header">
+      <div class="cci-br-common-header">
+        <div>Changelist</div>
+        <div>Owner</div>
+        <div>Time Started</div>
+        <div>Build</div>
+        <div>Unit Test</div>
+        <div>Functional Test</div>
+      </div>
+      <div class="cci-br-status-header">
+        <div>Status</div>
+      </div>
+    </li>
+    <li ng-repeat="(key, buildRun) in runs" ng-class="ctrl.getStatusClassLi(buildRun.statusCode)" ng-click="ctrl.expand(buildRun)" class="cci-br-li">
+      <div class="cci-br-common">
+        <div class="cci-br-summary">
+          <div class="cci-br-changelist-cell">{{buildRun.changelist}}</div>
+          <div>{{buildRun.owner.name}}</div>
+          <div>{{buildRun.timeStarted  | date:'M / dd / yyyy'}} <i class="fa fa-clock-o"></i> {{buildRun.timeStarted  | date:'h:mm a'}}</div>
+          <div class="cci-br-step-info">
+            <div class="cci-br-step-wrapper">x</div>
+            <div class="cci-br-step-progress-wrapper">
+              <div class="cci-br-step-progress"></div>
+            </div>
+            <div class="cci-br-step-wrapper">x</div>
+            <div class="cci-br-step-progress-wrapper">
+              <div class="cci-br-step-progress"></div>
+            </div>
+            <div class="cci-br-step-wrapper">x</div>
+          </div>
+        </div>
+        <div ng-show="buildRun.isExpanded" class="cci-br-detailed">
+          <div>
+            <div>
+              <p>Build [v]</p>
+              <p>3:14 am</p>
+            </div>
+            <div>
+              <div></div>
+              <p><a href="#">debug</a></p>
+            </div>
+            <div>
+              <div></div>
+              <p><a href="#">release</a></p>
+            </div>
+          </div>
+          <div>x</div>
+          <div>
+            <div>
+              <p>Unit Test [v]</p>
+              <p>88%</p>
+            </div>
+            <div>
+              <div></div>
+            </div>
+            <div>
+              <p>[] 342</p>
+              <p>[] 3</p>
+              <p>@ 4:30</p>
+            </div>
+          </div>
+          <div>x</div>
+          <div>
+            <div>
+              <p>Unit Test [v]</p>
+              <p>88%</p>
+            </div>
+            <div>
+              <div></div>
+            </div>
+            <div>
+              <p>[] 342</p>
+              <p>[] 3</p>
+              <p>@ 4:30</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="cci-br-status">
+        <div ng-hide="buildRun.isExpanded" class="cci-br-summary">
+          <div ng-class="ctrl.getStatusColorClass(buildRun.statusCode)" class="cci-br-status-cell"><span ng-class="ctrl.getStatusIconClass(buildRun.statusCode)" class="fa"></span> {{buildRun.statusName}}</div>
+        </div>
+        <div ng-show="buildRun.isExpanded" class="cci-br-detailed">
+          <div ng-class="ctrl.getStatusColorClass(buildRun.statusCode)" class="cci-br-status-cell"><span ng-class="ctrl.getStatusIconClass(buildRun.statusCode)" class="fa"></span> {{buildRun.statusName}}</div>
+        </div>
+      </div>
+    </li>
+  </ul>
 </div>
