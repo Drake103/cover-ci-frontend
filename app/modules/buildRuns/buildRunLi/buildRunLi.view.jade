@@ -1,0 +1,26 @@
+.cci-br-common
+  .cci-br-summary
+    div.cci-br-changelist-cell {{buildRun.changelist}}
+    div {{buildRun.owner.name}}
+    div {{buildRun.timeStarted  | date:'M / dd / yyyy'}} <i class="fa fa-clock-o"></i> {{buildRun.timeStarted  | date:'h:mm a'}}
+    .cci-br-step-info
+      .cci-br-step-wrapper
+        div(ng-class='getStatusColorClass(buildRun.buildStep.status.code)')
+      .cci-br-step-progress-wrapper
+        .cci-br-step-progress
+      .cci-br-step-wrapper
+        div
+      .cci-br-step-progress-wrapper
+        .cci-br-step-progress
+      .cci-br-step-wrapper
+        div
+  div(build-run-detailed='', build-run='buildRun')
+.cci-br-status
+  .cci-br-summary(ng-hide='buildRun.isExpanded')
+    div(class='cci-br-status-cell', ng-class='getStatusColorClass(buildRun.status.code)')
+      span(class='fa', ng-class='getStatusIconClass(buildRun.status.code)')
+      |  {{buildRun.status.name}}
+  .cci-br-detailed(ng-show='buildRun.isExpanded')
+    div(class='cci-br-status-cell', ng-class='getStatusColorClass(buildRun.status.code)')
+      span(class='fa', ng-class='getStatusIconClass(buildRun.status.code)')
+      |  {{buildRun.status.name}}

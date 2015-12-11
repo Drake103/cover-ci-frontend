@@ -2,50 +2,20 @@
 <div ng-show="buildRun.isExpanded" class="cci-br-detailed">
   <div class="cci-br-build-info">
     <div>
-      <p>Build<span ng-class="ctrl.getStatusColorClass(buildRun.buildStep.status.code)"><i ng-class="ctrl.getStepStatusIconClass(buildRun.buildStep.status.code)" class="fa"></i></span></p>
+      <p>Build<span ng-class="getStatusColorClass(buildRun.buildStep.status.code)"><i ng-class="getStepStatusIconClass(buildRun.buildStep.status.code)" class="fa"></i></span></p>
       <p>{{buildRun.buildStep.timeStarted | date:'h:mm a'}}</p>
     </div>
     <div>
-      <div ng-class="ctrl.getStatusColorClass(buildRun.buildStep.configurations[0].status.code)"><i ng-class="ctrl.getStatusIconClass(buildRun.buildStep.configurations[0].status.code)" class="fa"></i></div>
+      <div ng-class="getStatusColorClass(buildRun.buildStep.configurations[0].status.code)"><i ng-class="getStatusIconClass(buildRun.buildStep.configurations[0].status.code)" class="fa"></i></div>
       <p><a ng-href="buildRun.buildStep.configurations[0].packageLink">{{buildRun.buildStep.configurations[0].name}}</a></p>
     </div>
     <div>
-      <div ng-class="ctrl.getStatusColorClass(buildRun.buildStep.configurations[1].status.code)"><i ng-class="ctrl.getStatusIconClass(buildRun.buildStep.configurations[1].status.code)" class="fa"></i></div>
+      <div ng-class="getStatusColorClass(buildRun.buildStep.configurations[1].status.code)"><i ng-class="getStatusIconClass(buildRun.buildStep.configurations[1].status.code)" class="fa"></i></div>
       <p><a ng-href="buildRun.buildStep.configurations[1].packageLink">{{buildRun.buildStep.configurations[1].name}}</a></p>
     </div>
   </div>
   <div><i class="fa fa-angle-right"></i></div>
-  <div class="cci-br-test-info">
-    <div>
-      <p>Unit Test<span ng-class="ctrl.getStatusColorClass(buildRun.unitTestStep.status.code)"><i ng-class="ctrl.getStepStatusIconClass(buildRun.unitTestStep.status.code)" class="fa"></i></span></p>
-      <p>
-         
-        {{buildRun.unitTestStep.percentage}}%
-        Status:<span ng-class="ctrl.getStatusColorClass(buildRun.unitTestStep.status.code)">{{buildRun.unitTestStep.status.name}}</span>
-      </p>
-    </div>
-    <div>
-      <div></div>
-    </div>
-    <div>
-      <p><i class="fa fa-square cci-status-passed"></i>{{buildRun.unitTestStep.info.passedCount}}</p>
-      <p><i class="fa fa-square cci-status-failed"></i>{{buildRun.unitTestStep.info.failedCount}}</p>
-      <p><i class="fa fa-hourglass-end"></i>{{buildRun.unitTestStep.duration}}</p>
-    </div>
-  </div>
+  <div test-step-detailed="" test-step="buildRun.unitTestStep"></div>
   <div><i class="fa fa-angle-right"></i></div>
-  <div>
-    <div>
-      <p>Unit Test [v]</p>
-      <p>88%</p>
-    </div>
-    <div>
-      <div></div>
-    </div>
-    <div>
-      <p>[] 342</p>
-      <p>[] 3</p>
-      <p>@ 4:30</p>
-    </div>
-  </div>
+  <div test-step-detailed="" test-step="buildRun.functionalTestStep"></div>
 </div>

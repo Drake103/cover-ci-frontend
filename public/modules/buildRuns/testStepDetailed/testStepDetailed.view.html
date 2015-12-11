@@ -1,0 +1,19 @@
+
+<div class="cci-br-test-info">
+  <div>
+    <p>{{testName}}<span ng-class="getStatusColorClass(testStep.status.code)"><i ng-class="getStepStatusIconClass(testStep.status.code)" class="fa"></i></span></p>
+    <p>
+       
+      {{testStep.percentage}}%
+      Status:<span ng-class="getStatusColorClass(testStep.status.code)">{{testStep.status.name}}</span>
+    </p>
+  </div>
+  <div>
+    <div></div>
+  </div>
+  <div>
+    <p><i class="fa fa-square cci-status-passed"></i>{{testStep.info.passedCount}}</p>
+    <p><i class="fa fa-square cci-status-failed"></i>{{testStep.info.failedCount}}</p>
+    <p><i class="fa fa-hourglass-end"></i>{{testStep.duration}}</p>
+  </div>
+</div>

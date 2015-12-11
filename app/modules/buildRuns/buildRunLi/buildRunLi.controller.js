@@ -3,7 +3,7 @@ import statusesHelper from '../helpers/statuses.helper';
 
 var BuildRunStatusesEnum = enums.BuildRunStatusesEnum;
 
-class BuildRunDetailedController {
+class buildRunLiController {
   constructor($scope) {
     this.$scope = $scope;
 
@@ -14,5 +14,5 @@ class BuildRunDetailedController {
   }
 }
 
-BuildRunDetailedController.$inject = ['$scope'];
-export default BuildRunDetailedController;
+buildRunLiController.$inject = ['$scope'];
+export default buildRunLiController;

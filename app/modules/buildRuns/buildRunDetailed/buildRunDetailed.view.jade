@@ -2,52 +2,22 @@
   div.cci-br-build-info
     div
       p Build
-        span(ng-class='ctrl.getStatusColorClass(buildRun.buildStep.status.code)')
-          i(class='fa', ng-class='ctrl.getStepStatusIconClass(buildRun.buildStep.status.code)')
+        span(ng-class='getStatusColorClass(buildRun.buildStep.status.code)')
+          i(class='fa', ng-class='getStepStatusIconClass(buildRun.buildStep.status.code)')
       p {{buildRun.buildStep.timeStarted | date:'h:mm a'}}
     div
-      div(ng-class='ctrl.getStatusColorClass(buildRun.buildStep.configurations[0].status.code)')
-        i(class='fa', ng-class='ctrl.getStatusIconClass(buildRun.buildStep.configurations[0].status.code)')
+      div(ng-class='getStatusColorClass(buildRun.buildStep.configurations[0].status.code)')
+        i(class='fa', ng-class='getStatusIconClass(buildRun.buildStep.configurations[0].status.code)')
       p
         a(ng-href='buildRun.buildStep.configurations[0].packageLink') {{buildRun.buildStep.configurations[0].name}}
     div
-      div(ng-class='ctrl.getStatusColorClass(buildRun.buildStep.configurations[1].status.code)')
-        i(class='fa', ng-class='ctrl.getStatusIconClass(buildRun.buildStep.configurations[1].status.code)')
+      div(ng-class='getStatusColorClass(buildRun.buildStep.configurations[1].status.code)')
+        i(class='fa', ng-class='getStatusIconClass(buildRun.buildStep.configurations[1].status.code)')
       p
         a(ng-href='buildRun.buildStep.configurations[1].packageLink') {{buildRun.buildStep.configurations[1].name}}
   div
     i(class='fa fa-angle-right')
-  div.cci-br-test-info
-    div
-      p Unit Test
-        span(ng-class='ctrl.getStatusColorClass(buildRun.unitTestStep.status.code)')
-          i(class='fa', ng-class='ctrl.getStepStatusIconClass(buildRun.unitTestStep.status.code)')
-      p 
-        | {{buildRun.unitTestStep.percentage}}%
-        | Status:
-        span(ng-class='ctrl.getStatusColorClass(buildRun.unitTestStep.status.code)')
-          | {{buildRun.unitTestStep.status.name}}
-    div
-      div
-    div
-      p
-        i(class='fa fa-square cci-status-passed')
-        | {{buildRun.unitTestStep.info.passedCount}}
-      p
-        i(class='fa fa-square cci-status-failed')
-        | {{buildRun.unitTestStep.info.failedCount}}
-      p
-        i(class='fa fa-hourglass-end')
-        | {{buildRun.unitTestStep.duration}}
+  div(test-step-detailed='', test-step='buildRun.unitTestStep')
   div
     i(class='fa fa-angle-right')
-  div
-    div
-      p Unit Test [v]
-      p 88%
-    div
-      div
-    div
-      p [] 342
-      p [] 3
-      p @ 4:30
+  div(test-step-detailed='', test-step='buildRun.functionalTestStep')
