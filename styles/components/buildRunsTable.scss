@@ -8,8 +8,8 @@ $status-running-color: rgb(28, 132, 198);
 $status-passed-color: rgb(26, 179, 148);
 $status-failed-color: rgb(237, 85, 101);
 
-$status-colors-list: $status-default-color, $status-pending-color, $status-running-color, $status-passed-color, $status-failed-color;
-$statuses-list: "default", "pending", "running", "passed", "failed";
+$status-colors-list: $status-default-color, $status-pending-color, $status-running-color, $status-passed-color, $status-failed-color, $status-failed-color;
+$statuses-list: "default", "pending", "running", "passed", "failed", "cant-run";
 
 @mixin cci-li-status($color){
   border-left-color: $color !important;
@@ -80,7 +80,7 @@ ul.cci-br-ul {
         @include span-columns(10.5);
         height: $header-row-height;
 
-        div {
+        > div {
           @include cell-padding();
           @include vertical-align();
 
@@ -110,7 +110,7 @@ ul.cci-br-ul {
         @include span-columns(1.5);
         height: $header-row-height;
 
-        div {
+        > div {
           @include cell-padding();
           @include vertical-align();
         }
@@ -123,7 +123,7 @@ ul.cci-br-ul {
 
       div.cci-br-summary {
         height: $row-height;
-        div {
+        > div {
           @include cell-padding();
           @include vertical-align();
 
@@ -146,16 +146,54 @@ ul.cci-br-ul {
           }
 
           &.cci-br-step-info {
+            @include clearfix;
+            @include vertical-align();
+            @include cell-padding();
+
+            vertical-align: middle;
+
             div.cci-br-step-wrapper {
-              display: inline-block;
-              width: 32px;
-              height: 32px;
-              background-color: grey;
+              display: block;
+              float: left;
+              width: 40px;
+              height: 40px;
+              background-color: $status-default-color;
+              border-radius: 20px;
+              z-index: 10;
+
+              div {
+                width: 28px;
+                height: 28px;
+                border-radius: 14px;
+                background: red;
+                z-index: 19;
+              }
             }
+
             div.cci-br-step-progress-wrapper {
-              display: inline-block;
-              height: 20px;
-              background-color: grey;
+              display: block;
+              float:left;
+              height: 16px;
+              width: 50%;
+              background-color: $status-default-color;
+              margin-left: -20px;
+              margin-right: -20px;
+              z-index: 1;
+
+              &:nth-child(2) {
+                margin-left: -40px;
+              }
+
+              &:nth-child(4) {
+                margin-right: -40px;
+              }
+
+              div {
+                width: 100%;
+                height: 10px;
+                background: yellow;
+                z-index: 9;
+              }
             }
           }
         }
@@ -164,23 +202,51 @@ ul.cci-br-ul {
       div.cci-br-detailed {
         @include clearfix;
 
-        div {
+        > div {
           @include cell-padding();
 
           &:nth-child(1) {
-            @include span-columns(3);
+            @include span-columns(3.5);
           }
           &:nth-child(2) {
-            @include span-columns(1);
+            @include span-columns(0);
           }
           &:nth-child(3) {
-            @include span-columns(3);
+            @include span-columns(3.5);
           }
           &:nth-child(4) {
-            @include span-columns(1);
+            @include span-columns(0);
           }
           &:nth-child(5) {
-            @include span-columns(4);
+            @include span-columns(3.5);
+          }
+
+          &.cci-br-build-info {
+            > div {
+              &:nth-child(1) {
+                @include span-columns(5);
+              }
+              &:nth-child(2) {
+                @include span-columns(3);
+              }
+              &:nth-child(3) {
+                @include span-columns(3);
+              }
+            }
+          }
+
+          &.cci-br-test-info {
+            > div {
+              &:nth-child(1) {
+                @include span-columns(4);
+              }
+              &:nth-child(2) {
+                @include span-columns(6);
+              }
+              &:nth-child(3) {
+                @include span-columns(2);
+              }
+            }
           }
         }
       }
@@ -189,10 +255,10 @@ ul.cci-br-ul {
     div.cci-br-status {
       @include clearfix;
       @include span-columns(1.5);
-      
+
       div.cci-br-summary {
         height: $row-height;
-        div {
+        > div {
           @include vertical-align();
           @include span-columns(12);
 
@@ -207,7 +273,7 @@ ul.cci-br-ul {
       }
 
       div.cci-br-detailed {
-        div {
+        > div {
           @include vertical-align();
           @include span-columns(12);
 

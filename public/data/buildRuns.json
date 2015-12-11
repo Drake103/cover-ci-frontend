@@ -7,28 +7,65 @@
         "name": "JTuck"
       },
       "timeStarted": 1449835200,
-      "statusCode": 1,
-      "statusName": "Pending",
-      "steps": [
-        {
-          "type": "build",
-          "statusCode": 3,
-          "statusName": "Passed",
-          "percentage": 100
+      "status": {
+        "code": 1,
+        "name": "Pending"
+      },
+      "buildStep": {
+        "status": {
+          "code": 1,
+          "name": "Pending"
         },
-        {
-          "type": "unitTests",
-          "statusCode": 3,
-          "statusName": "Passed",
-          "percentage": 100
+        "timeStarted": 1449835200,
+        "stepFinished": 1449835200,
+        "duration": 3600,
+        "configurations": [
+          {
+            "name": "debug",
+            "status": {
+              "code": 3,
+              "name": "Passed"
+            },
+            "packageLink": "http://google.com"
+          },
+          {
+            "name": "release",
+            "status": {
+              "code": 4,
+              "name": "Failed"
+            },
+            "packageLink": "http://google.com"
+          }
+        ]
+      },
+      "unitTestStep": {
+        "status": {
+          "code": 5,
+          "name": "Can't Run"
         },
-        {
-          "type": "functionalTests",
-          "statusCode": 1,
-          "statusName": "Pending",
-          "percentage": 50
+        "timeStarted": 1449835200,
+        "timeFinished": 1449835200,
+        "duration": 3600,
+        "percentage": 13,
+        "info": {
+          "passedCount": 342,
+          "failedCount": 3
         }
-      ]
+      },
+      "functionalTestStep": {
+        "status": {
+          "code": 5,
+          "name": "Can't Run"
+        },
+        "timeStarted": 1449835200,
+        "stepFinished": 1449835200,
+        "duration": 3600,
+        "percentage": 13,
+        "info": {
+          "passedCount": 14321,
+          "failedCount": 2000
+        }
+      }
     },
     {
       "changelist": "432463",
@@ -37,28 +74,65 @@
         "name": "Dora"
       },
       "timeStarted": 1449835200,
-      "statusCode": 2,
-      "statusName": "Running",
-      "steps": [
-        {
-          "type": "build",
-          "statusCode": 3,
-          "statusName": "Passed",
-          "percentage": 100
+      "status": {
+        "code": 1,
+        "name": "Pending"
+      },
+      "buildStep": {
+        "status": {
+          "code": 1,
+          "name": "Pending"
         },
-        {
-          "type": "unitTests",
-          "statusCode": 3,
-          "statusName": "Passed",
-          "percentage": 100
+        "timeStarted": 1449835200,
+        "stepFinished": 1449835200,
+        "duration": 3600,
+        "configurations": [
+          {
+            "name": "debug",
+            "status": {
+              "code": 3,
+              "name": "Passed"
+            },
+            "packageLink": "http://google.com"
+          },
+          {
+            "name": "release",
+            "status": {
+              "code": 4,
+              "name": "Failed"
+            },
+            "packageLink": "http://google.com"
+          }
+        ]
+      },
+      "unitTestStep": {
+        "status": {
+          "code": 5,
+          "name": "Can't Run"
         },
-        {
-          "type": "functionalTests",
-          "statusCode": 1,
-          "statusName": "Pending",
-          "percentage": 50
+        "timeStarted": 1449835200,
+        "stepFinished": 1449835200,
+        "duration": 3600,
+        "percentage": 13,
+        "info": {
+          "passedCount": 342,
+          "failedCount": 3
         }
-      ]
+      },
+      "functionalTestStep": {
+        "status": {
+          "code": 5,
+          "name": "Can't Run"
+        },
+        "timeStarted": 1449835200,
+        "stepFinished": 1449835200,
+        "duration": 3600,
+        "percentage": 13,
+        "info": {
+          "passedCount": 14321,
+          "failedCount": 2000
+        }
+      }
     },
     {
       "changelist": "432462",
@@ -67,28 +141,65 @@
         "name": "Samy"
       },
       "timeStarted": 1449835200,
-      "statusCode": 3,
-      "statusName": "Passed",
-      "steps": [
-        {
-          "type": "build",
-          "statusCode": 3,
-          "statusName": "Passed",
-          "percentage": 100
+      "status": {
+        "code": 1,
+        "name": "Pending"
+      },
+      "buildStep": {
+        "status": {
+          "code": 1,
+          "name": "Pending"
         },
-        {
-          "type": "unitTests",
-          "statusCode": 3,
-          "statusName": "Passed",
-          "percentage": 100
+        "timeStarted": 1449835200,
+        "stepFinished": 1449835200,
+        "duration": 3600,
+        "configurations": [
+          {
+            "name": "debug",
+            "status": {
+              "code": 3,
+              "name": "Passed"
+            },
+            "packageLink": "http://google.com"
+          },
+          {
+            "name": "release",
+            "status": {
+              "code": 4,
+              "name": "Failed"
+            },
+            "packageLink": "http://google.com"
+          }
+        ]
+      },
+      "unitTestStep": {
+        "status": {
+          "code": 5,
+          "name": "Can't Run"
         },
-        {
-          "type": "functionalTests",
-          "statusCode": 1,
-          "statusName": "Pending",
-          "percentage": 50
+        "timeStarted": 1449835200,
+        "stepFinished": 1449835200,
+        "duration": 3600,
+        "percentage": 13,
+        "info": {
+          "passedCount": 342,
+          "failedCount": 3
         }
-      ]
+      },
+      "functionalTestStep": {
+        "status": {
+          "code": 5,
+          "name": "Can't Run"
+        },
+        "timeStarted": 1449835200,
+        "stepFinished": 1449835200,
+        "duration": 3600,
+        "percentage": 13,
+        "info": {
+          "passedCount": 14321,
+          "failedCount": 2000
+        }
+      }
     },
     {
       "changelist": "432461",
@@ -97,28 +208,65 @@
         "name": "JTuck"
       },
       "timeStarted": 1449835200,
-      "statusCode": 4,
-      "statusName": "Failed",
-      "steps": [
-        {
-          "type": "build",
-          "statusCode": 3,
-          "statusName": "Passed",
-          "percentage": 100
+      "status": {
+        "code": 1,
+        "name": "Pending"
+      },
+      "buildStep": {
+        "status": {
+          "code": 1,
+          "name": "Pending"
         },
-        {
-          "type": "unitTests",
-          "statusCode": 3,
-          "statusName": "Passed",
-          "percentage": 100
+        "timeStarted": 1449835200,
+        "stepFinished": 1449835200,
+        "duration": 3600,
+        "configurations": [
+          {
+            "name": "debug",
+            "status": {
+              "code": 3,
+              "name": "Passed"
+            },
+            "packageLink": "http://google.com"
+          },
+          {
+            "name": "release",
+            "status": {
+              "code": 4,
+              "name": "Failed"
+            },
+            "packageLink": "http://google.com"
+          }
+        ]
+      },
+      "unitTestStep": {
+        "status": {
+          "code": 5,
+          "name": "Can't Run"
         },
-        {
-          "type": "functionalTests",
-          "statusCode": 1,
-          "statusName": "Pending",
-          "percentage": 50
+        "timeStarted": 1449835200,
+        "stepFinished": 1449835200,
+        "duration": 3600,
+        "percentage": 13,
+        "info": {
+          "passedCount": 342,
+          "failedCount": 3
         }
-      ]
+      },
+      "functionalTestStep": {
+        "status": {
+          "code": 5,
+          "name": "Can't Run"
+        },
+        "timeStarted": 1449835200,
+        "stepFinished": 1449835200,
+        "duration": 3600,
+        "percentage": 13,
+        "info": {
+          "passedCount": 14321,
+          "failedCount": 2000
+        }
+      }
     },
     {
       "changelist": "432460",
@@ -127,28 +275,65 @@
         "name": "Samy"
       },
       "timeStarted": 1449835200,
-      "statusCode": 3,
-      "statusName": "Passed",
-      "steps": [
-        {
-          "type": "build",
-          "statusCode": 3,
-          "statusName": "Passed",
-          "percentage": 100
+      "status": {
+        "code": 1,
+        "name": "Pending"
+      },
+      "buildStep": {
+        "status": {
+          "code": 1,
+          "name": "Pending"
         },
-        {
-          "type": "unitTests",
-          "statusCode": 3,
-          "statusName": "Passed",
-          "percentage": 100
+        "timeStarted": 1449835200,
+        "stepFinished": 1449835200,
+        "duration": 3600,
+        "configurations": [
+          {
+            "name": "debug",
+            "status": {
+              "code": 3,
+              "name": "Passed"
+            },
+            "packageLink": "http://google.com"
+          },
+          {
+            "name": "release",
+            "status": {
+              "code": 4,
+              "name": "Failed"
+            },
+            "packageLink": "http://google.com"
+          }
+        ]
+      },
+      "unitTestStep": {
+        "status": {
+          "code": 5,
+          "name": "Can't Run"
         },
-        {
-          "type": "functionalTests",
-          "statusCode": 1,
-          "statusName": "Pending",
-          "percentage": 50
+        "timeStarted": 1449835200,
+        "stepFinished": 1449835200,
+        "duration": 3600,
+        "percentage": 13,
+        "info": {
+          "passedCount": 342,
+          "failedCount": 3
         }
-      ]
+      },
+      "functionalTestStep": {
+        "status": {
+          "code": 5,
+          "name": "Can't Run"
+        },
+        "timeStarted": 1449835200,
+        "stepFinished": 1449835200,
+        "duration": 3600,
+        "percentage": 13,
+        "info": {
+          "passedCount": 14321,
+          "failedCount": 2000
+        }
+      }
     },
     {
       "changelist": "432459",
@@ -157,28 +342,65 @@
         "name": "Dora"
       },
       "timeStarted": 1449835200,
-      "statusCode": 4,
-      "statusName": "Failed",
-      "steps": [
-        {
-          "type": "build",
-          "statusCode": 3,
-          "statusName": "Passed",
-          "percentage": 100
+      "status": {
+        "code": 1,
+        "name": "Pending"
+      },
+      "buildStep": {
+        "status": {
+          "code": 1,
+          "name": "Pending"
         },
-        {
-          "type": "unitTests",
-          "statusCode": 3,
-          "statusName": "Passed",
-          "percentage": 100
+        "timeStarted": 1449835200,
+        "stepFinished": 1449835200,
+        "duration": 3600,
+        "configurations": [
+          {
+            "name": "debug",
+            "status": {
+              "code": 3,
+              "name": "Passed"
+            },
+            "packageLink": "http://google.com"
+          },
+          {
+            "name": "release",
+            "status": {
+              "code": 4,
+              "name": "Failed"
+            },
+            "packageLink": "http://google.com"
+          }
+        ]
+      },
+      "unitTestStep": {
+        "status": {
+          "code": 5,
+          "name": "Can't Run"
         },
-        {
-          "type": "functionalTests",
-          "statusCode": 1,
-          "statusName": "Pending",
-          "percentage": 50
+        "timeStarted": 1449835200,
+        "stepFinished": 1449835200,
+        "duration": 3600,
+        "percentage": 13,
+        "info": {
+          "passedCount": 342,
+          "failedCount": 3
         }
-      ]
+      },
+      "functionalTestStep": {
+        "status": {
+          "code": 5,
+          "name": "Can't Run"
+        },
+        "timeStarted": 1449835200,
+        "stepFinished": 1449835200,
+        "duration": 3600,
+        "percentage": 13,
+        "info": {
+          "passedCount": 14321,
+          "failedCount": 2000
+        }
+      }
     }
   ]
 }

@@ -42,6 +42,22 @@ class BuildRunsController {
     return null;
   }
 
+  getStepStatusIconClass(statusCode) {
+    switch (statusCode) {
+      case BuildRunStatusesEnum.PENDING:
+        return 'fa-dot-circle-o';
+      case BuildRunStatusesEnum.RUNNING:
+        return 'fa-refresh';
+      case BuildRunStatusesEnum.PASSED:
+        return 'fa-check-square';
+      case BuildRunStatusesEnum.FAILED:
+        return 'fa-times-circle';
+      case BuildRunStatusesEnum.CANT_RUN:
+        return 'fa-minus-circle';
+    }
+    return null;
+  }
+
   getStatusColorClass(statusCode) {
     switch (statusCode) {
       case BuildRunStatusesEnum.PENDING:
@@ -52,6 +68,8 @@ class BuildRunsController {
         return 'cci-status-passed';
       case BuildRunStatusesEnum.FAILED:
         return 'cci-status-failed';
+      case BuildRunStatusesEnum.CANT_RUN:
+        return 'cci-status-cant-run';
     }
     return 'cci-status-default';
   }

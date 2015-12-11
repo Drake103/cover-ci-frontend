@@ -2125,6 +2125,12 @@ html {
 .cci-status-failed {
   color: #ed5565; }
 
+.cci-li-status-cant-run {
+  border-left-color: #ed5565 !important; }
+
+.cci-status-cant-run {
+  color: #ed5565; }
+
 ul.cci-br-ul {
   list-style: none;
   max-width: 68em;
@@ -2162,54 +2168,54 @@ ul.cci-br-ul {
         height: 48px; }
         ul.cci-br-ul li.cci-br-li.cci-br-header div.cci-br-common-header:last-child {
           margin-right: 0; }
-        ul.cci-br-ul li.cci-br-li.cci-br-header div.cci-br-common-header div {
+        ul.cci-br-ul li.cci-br-li.cci-br-header div.cci-br-common-header > div {
           padding: 5px;
           position: relative;
           top: 50%;
           -webkit-transform: translateY(-50%);
           transform: translateY(-50%); }
-          ul.cci-br-ul li.cci-br-li.cci-br-header div.cci-br-common-header div:nth-child(1) {
+          ul.cci-br-ul li.cci-br-li.cci-br-header div.cci-br-common-header > div:nth-child(1) {
             padding-left: 30px;
             float: left;
             display: block;
             margin-right: 2.35765%;
             width: 14.70196%; }
-            ul.cci-br-ul li.cci-br-li.cci-br-header div.cci-br-common-header div:nth-child(1):last-child {
+            ul.cci-br-ul li.cci-br-li.cci-br-header div.cci-br-common-header > div:nth-child(1):last-child {
               margin-right: 0; }
-          ul.cci-br-ul li.cci-br-li.cci-br-header div.cci-br-common-header div:nth-child(2) {
+          ul.cci-br-ul li.cci-br-li.cci-br-header div.cci-br-common-header > div:nth-child(2) {
             float: left;
             display: block;
             margin-right: 2.35765%;
             width: 10.43705%; }
-            ul.cci-br-ul li.cci-br-li.cci-br-header div.cci-br-common-header div:nth-child(2):last-child {
+            ul.cci-br-ul li.cci-br-li.cci-br-header div.cci-br-common-header > div:nth-child(2):last-child {
               margin-right: 0; }
-          ul.cci-br-ul li.cci-br-li.cci-br-header div.cci-br-common-header div:nth-child(3) {
+          ul.cci-br-ul li.cci-br-li.cci-br-header div.cci-br-common-header > div:nth-child(3) {
             float: left;
             display: block;
             margin-right: 2.35765%;
             width: 18.96686%; }
-            ul.cci-br-ul li.cci-br-li.cci-br-header div.cci-br-common-header div:nth-child(3):last-child {
+            ul.cci-br-ul li.cci-br-li.cci-br-header div.cci-br-common-header > div:nth-child(3):last-child {
               margin-right: 0; }
-          ul.cci-br-ul li.cci-br-li.cci-br-header div.cci-br-common-header div:nth-child(4) {
+          ul.cci-br-ul li.cci-br-li.cci-br-header div.cci-br-common-header > div:nth-child(4) {
             float: left;
             display: block;
             margin-right: 2.35765%;
             width: 14.70196%; }
-            ul.cci-br-ul li.cci-br-li.cci-br-header div.cci-br-common-header div:nth-child(4):last-child {
+            ul.cci-br-ul li.cci-br-li.cci-br-header div.cci-br-common-header > div:nth-child(4):last-child {
               margin-right: 0; }
-          ul.cci-br-ul li.cci-br-li.cci-br-header div.cci-br-common-header div:nth-child(5) {
+          ul.cci-br-ul li.cci-br-li.cci-br-header div.cci-br-common-header > div:nth-child(5) {
             float: left;
             display: block;
             margin-right: 2.35765%;
             width: 14.70196%; }
-            ul.cci-br-ul li.cci-br-li.cci-br-header div.cci-br-common-header div:nth-child(5):last-child {
+            ul.cci-br-ul li.cci-br-li.cci-br-header div.cci-br-common-header > div:nth-child(5):last-child {
               margin-right: 0; }
-          ul.cci-br-ul li.cci-br-li.cci-br-header div.cci-br-common-header div:nth-child(6) {
+          ul.cci-br-ul li.cci-br-li.cci-br-header div.cci-br-common-header > div:nth-child(6) {
             float: left;
             display: block;
             margin-right: 2.35765%;
             width: 14.70196%; }
-            ul.cci-br-ul li.cci-br-li.cci-br-header div.cci-br-common-header div:nth-child(6):last-child {
+            ul.cci-br-ul li.cci-br-li.cci-br-header div.cci-br-common-header > div:nth-child(6):last-child {
               margin-right: 0; }
       ul.cci-br-ul li.cci-br-li.cci-br-header div.cci-br-status-header {
         float: left;
@@ -2219,7 +2225,7 @@ ul.cci-br-ul {
         height: 48px; }
         ul.cci-br-ul li.cci-br-li.cci-br-header div.cci-br-status-header:last-child {
           margin-right: 0; }
-        ul.cci-br-ul li.cci-br-li.cci-br-header div.cci-br-status-header div {
+        ul.cci-br-ul li.cci-br-li.cci-br-header div.cci-br-status-header > div {
           padding: 5px;
           position: relative;
           top: 50%;
@@ -2238,93 +2244,169 @@ ul.cci-br-ul {
         display: table; }
       ul.cci-br-ul li.cci-br-li div.cci-br-common div.cci-br-summary {
         height: 64px; }
-        ul.cci-br-ul li.cci-br-li div.cci-br-common div.cci-br-summary div {
+        ul.cci-br-ul li.cci-br-li div.cci-br-common div.cci-br-summary > div {
           padding: 5px;
           position: relative;
           top: 50%;
           -webkit-transform: translateY(-50%);
           transform: translateY(-50%); }
-          ul.cci-br-ul li.cci-br-li div.cci-br-common div.cci-br-summary div:nth-child(1) {
+          ul.cci-br-ul li.cci-br-li div.cci-br-common div.cci-br-summary > div:nth-child(1) {
             padding-left: 30px;
             float: left;
             display: block;
             margin-right: 2.35765%;
             width: 14.70196%; }
-            ul.cci-br-ul li.cci-br-li div.cci-br-common div.cci-br-summary div:nth-child(1):last-child {
+            ul.cci-br-ul li.cci-br-li div.cci-br-common div.cci-br-summary > div:nth-child(1):last-child {
               margin-right: 0; }
-          ul.cci-br-ul li.cci-br-li div.cci-br-common div.cci-br-summary div:nth-child(2) {
+          ul.cci-br-ul li.cci-br-li div.cci-br-common div.cci-br-summary > div:nth-child(2) {
             float: left;
             display: block;
             margin-right: 2.35765%;
             width: 10.43705%; }
-            ul.cci-br-ul li.cci-br-li div.cci-br-common div.cci-br-summary div:nth-child(2):last-child {
+            ul.cci-br-ul li.cci-br-li div.cci-br-common div.cci-br-summary > div:nth-child(2):last-child {
               margin-right: 0; }
-          ul.cci-br-ul li.cci-br-li div.cci-br-common div.cci-br-summary div:nth-child(3) {
+          ul.cci-br-ul li.cci-br-li div.cci-br-common div.cci-br-summary > div:nth-child(3) {
             float: left;
             display: block;
             margin-right: 2.35765%;
             width: 18.96686%; }
-            ul.cci-br-ul li.cci-br-li div.cci-br-common div.cci-br-summary div:nth-child(3):last-child {
+            ul.cci-br-ul li.cci-br-li div.cci-br-common div.cci-br-summary > div:nth-child(3):last-child {
               margin-right: 0; }
-          ul.cci-br-ul li.cci-br-li div.cci-br-common div.cci-br-summary div:nth-child(4) {
+          ul.cci-br-ul li.cci-br-li div.cci-br-common div.cci-br-summary > div:nth-child(4) {
             float: left;
             display: block;
             margin-right: 2.35765%;
             width: 48.82117%; }
-            ul.cci-br-ul li.cci-br-li div.cci-br-common div.cci-br-summary div:nth-child(4):last-child {
+            ul.cci-br-ul li.cci-br-li div.cci-br-common div.cci-br-summary > div:nth-child(4):last-child {
               margin-right: 0; }
-          ul.cci-br-ul li.cci-br-li div.cci-br-common div.cci-br-summary div.cci-br-changelist-cell {
+          ul.cci-br-ul li.cci-br-li div.cci-br-common div.cci-br-summary > div.cci-br-changelist-cell {
             font-size: 13px;
             font-weight: bolder; }
-          ul.cci-br-ul li.cci-br-li div.cci-br-common div.cci-br-summary div.cci-br-step-info div.cci-br-step-wrapper {
-            display: inline-block;
-            width: 32px;
-            height: 32px;
-            background-color: grey; }
-          ul.cci-br-ul li.cci-br-li div.cci-br-common div.cci-br-summary div.cci-br-step-info div.cci-br-step-progress-wrapper {
-            display: inline-block;
-            height: 20px;
-            background-color: grey; }
+          ul.cci-br-ul li.cci-br-li div.cci-br-common div.cci-br-summary > div.cci-br-step-info {
+            position: relative;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+            padding: 5px;
+            vertical-align: middle; }
+            ul.cci-br-ul li.cci-br-li div.cci-br-common div.cci-br-summary > div.cci-br-step-info::after {
+              clear: both;
+              content: "";
+              display: table; }
+            ul.cci-br-ul li.cci-br-li div.cci-br-common div.cci-br-summary > div.cci-br-step-info div.cci-br-step-wrapper {
+              display: block;
+              float: left;
+              width: 40px;
+              height: 40px;
+              background-color: #d2d2d2;
+              border-radius: 20px;
+              z-index: 10; }
+              ul.cci-br-ul li.cci-br-li div.cci-br-common div.cci-br-summary > div.cci-br-step-info div.cci-br-step-wrapper div {
+                width: 28px;
+                height: 28px;
+                border-radius: 14px;
+                background: red;
+                z-index: 19; }
+            ul.cci-br-ul li.cci-br-li div.cci-br-common div.cci-br-summary > div.cci-br-step-info div.cci-br-step-progress-wrapper {
+              display: block;
+              float: left;
+              height: 16px;
+              width: 50%;
+              background-color: #d2d2d2;
+              margin-left: -20px;
+              margin-right: -20px;
+              z-index: 1; }
+              ul.cci-br-ul li.cci-br-li div.cci-br-common div.cci-br-summary > div.cci-br-step-info div.cci-br-step-progress-wrapper:nth-child(2) {
+                margin-left: -40px; }
+              ul.cci-br-ul li.cci-br-li div.cci-br-common div.cci-br-summary > div.cci-br-step-info div.cci-br-step-progress-wrapper:nth-child(4) {
+                margin-right: -40px; }
+              ul.cci-br-ul li.cci-br-li div.cci-br-common div.cci-br-summary > div.cci-br-step-info div.cci-br-step-progress-wrapper div {
+                width: 100%;
+                height: 10px;
+                background: yellow;
+                z-index: 9; }
       ul.cci-br-ul li.cci-br-li div.cci-br-common div.cci-br-detailed::after {
         clear: both;
         content: "";
         display: table; }
-      ul.cci-br-ul li.cci-br-li div.cci-br-common div.cci-br-detailed div {
+      ul.cci-br-ul li.cci-br-li div.cci-br-common div.cci-br-detailed > div {
         padding: 5px; }
-        ul.cci-br-ul li.cci-br-li div.cci-br-common div.cci-br-detailed div:nth-child(1) {
+        ul.cci-br-ul li.cci-br-li div.cci-br-common div.cci-br-detailed > div:nth-child(1) {
+          float: left;
+          display: block;
+          margin-right: 2.35765%;
+          width: 27.49666%; }
+          ul.cci-br-ul li.cci-br-li div.cci-br-common div.cci-br-detailed > div:nth-child(1):last-child {
+            margin-right: 0; }
+        ul.cci-br-ul li.cci-br-li div.cci-br-common div.cci-br-detailed > div:nth-child(2) {
+          float: left;
+          display: block;
+          margin-right: 2.35765%;
+          width: -2.35765%; }
+          ul.cci-br-ul li.cci-br-li div.cci-br-common div.cci-br-detailed > div:nth-child(2):last-child {
+            margin-right: 0; }
+        ul.cci-br-ul li.cci-br-li div.cci-br-common div.cci-br-detailed > div:nth-child(3) {
+          float: left;
+          display: block;
+          margin-right: 2.35765%;
+          width: 27.49666%; }
+          ul.cci-br-ul li.cci-br-li div.cci-br-common div.cci-br-detailed > div:nth-child(3):last-child {
+            margin-right: 0; }
+        ul.cci-br-ul li.cci-br-li div.cci-br-common div.cci-br-detailed > div:nth-child(4) {
+          float: left;
+          display: block;
+          margin-right: 2.35765%;
+          width: -2.35765%; }
+          ul.cci-br-ul li.cci-br-li div.cci-br-common div.cci-br-detailed > div:nth-child(4):last-child {
+            margin-right: 0; }
+        ul.cci-br-ul li.cci-br-li div.cci-br-common div.cci-br-detailed > div:nth-child(5) {
+          float: left;
+          display: block;
+          margin-right: 2.35765%;
+          width: 27.49666%; }
+          ul.cci-br-ul li.cci-br-li div.cci-br-common div.cci-br-detailed > div:nth-child(5):last-child {
+            margin-right: 0; }
+        ul.cci-br-ul li.cci-br-li div.cci-br-common div.cci-br-detailed > div.cci-br-build-info > div:nth-child(1) {
+          float: left;
+          display: block;
+          margin-right: 2.35765%;
+          width: 40.29137%; }
+          ul.cci-br-ul li.cci-br-li div.cci-br-common div.cci-br-detailed > div.cci-br-build-info > div:nth-child(1):last-child {
+            margin-right: 0; }
+        ul.cci-br-ul li.cci-br-li div.cci-br-common div.cci-br-detailed > div.cci-br-build-info > div:nth-child(2) {
           float: left;
           display: block;
           margin-right: 2.35765%;
           width: 23.23176%; }
-          ul.cci-br-ul li.cci-br-li div.cci-br-common div.cci-br-detailed div:nth-child(1):last-child {
+          ul.cci-br-ul li.cci-br-li div.cci-br-common div.cci-br-detailed > div.cci-br-build-info > div:nth-child(2):last-child {
             margin-right: 0; }
-        ul.cci-br-ul li.cci-br-li div.cci-br-common div.cci-br-detailed div:nth-child(2) {
-          float: left;
-          display: block;
-          margin-right: 2.35765%;
-          width: 6.17215%; }
-          ul.cci-br-ul li.cci-br-li div.cci-br-common div.cci-br-detailed div:nth-child(2):last-child {
-            margin-right: 0; }
-        ul.cci-br-ul li.cci-br-li div.cci-br-common div.cci-br-detailed div:nth-child(3) {
+        ul.cci-br-ul li.cci-br-li div.cci-br-common div.cci-br-detailed > div.cci-br-build-info > div:nth-child(3) {
           float: left;
           display: block;
           margin-right: 2.35765%;
           width: 23.23176%; }
-          ul.cci-br-ul li.cci-br-li div.cci-br-common div.cci-br-detailed div:nth-child(3):last-child {
+          ul.cci-br-ul li.cci-br-li div.cci-br-common div.cci-br-detailed > div.cci-br-build-info > div:nth-child(3):last-child {
             margin-right: 0; }
-        ul.cci-br-ul li.cci-br-li div.cci-br-common div.cci-br-detailed div:nth-child(4) {
-          float: left;
-          display: block;
-          margin-right: 2.35765%;
-          width: 6.17215%; }
-          ul.cci-br-ul li.cci-br-li div.cci-br-common div.cci-br-detailed div:nth-child(4):last-child {
-            margin-right: 0; }
-        ul.cci-br-ul li.cci-br-li div.cci-br-common div.cci-br-detailed div:nth-child(5) {
+        ul.cci-br-ul li.cci-br-li div.cci-br-common div.cci-br-detailed > div.cci-br-test-info > div:nth-child(1) {
           float: left;
           display: block;
           margin-right: 2.35765%;
           width: 31.76157%; }
-          ul.cci-br-ul li.cci-br-li div.cci-br-common div.cci-br-detailed div:nth-child(5):last-child {
+          ul.cci-br-ul li.cci-br-li div.cci-br-common div.cci-br-detailed > div.cci-br-test-info > div:nth-child(1):last-child {
+            margin-right: 0; }
+        ul.cci-br-ul li.cci-br-li div.cci-br-common div.cci-br-detailed > div.cci-br-test-info > div:nth-child(2) {
+          float: left;
+          display: block;
+          margin-right: 2.35765%;
+          width: 48.82117%; }
+          ul.cci-br-ul li.cci-br-li div.cci-br-common div.cci-br-detailed > div.cci-br-test-info > div:nth-child(2):last-child {
+            margin-right: 0; }
+        ul.cci-br-ul li.cci-br-li div.cci-br-common div.cci-br-detailed > div.cci-br-test-info > div:nth-child(3) {
+          float: left;
+          display: block;
+          margin-right: 2.35765%;
+          width: 14.70196%; }
+          ul.cci-br-ul li.cci-br-li div.cci-br-common div.cci-br-detailed > div.cci-br-test-info > div:nth-child(3):last-child {
             margin-right: 0; }
     ul.cci-br-ul li.cci-br-li div.cci-br-status {
       float: left;
@@ -2339,7 +2421,7 @@ ul.cci-br-ul {
         margin-right: 0; }
       ul.cci-br-ul li.cci-br-li div.cci-br-status div.cci-br-summary {
         height: 64px; }
-        ul.cci-br-ul li.cci-br-li div.cci-br-status div.cci-br-summary div {
+        ul.cci-br-ul li.cci-br-li div.cci-br-status div.cci-br-summary > div {
           position: relative;
           top: 50%;
           -webkit-transform: translateY(-50%);
@@ -2348,14 +2430,14 @@ ul.cci-br-ul {
           display: block;
           margin-right: 2.35765%;
           width: 100%; }
-          ul.cci-br-ul li.cci-br-li div.cci-br-status div.cci-br-summary div:last-child {
+          ul.cci-br-ul li.cci-br-li div.cci-br-status div.cci-br-summary > div:last-child {
             margin-right: 0; }
-          ul.cci-br-ul li.cci-br-li div.cci-br-status div.cci-br-summary div.cci-br-status-cell {
+          ul.cci-br-ul li.cci-br-li div.cci-br-status div.cci-br-summary > div.cci-br-status-cell {
             font-size: 13px;
             font-weight: bolder; }
         ul.cci-br-ul li.cci-br-li div.cci-br-status div.cci-br-summary span.fa {
           font-size: 1.5em; }
-      ul.cci-br-ul li.cci-br-li div.cci-br-status div.cci-br-detailed div {
+      ul.cci-br-ul li.cci-br-li div.cci-br-status div.cci-br-detailed > div {
         position: relative;
         top: 50%;
         -webkit-transform: translateY(-50%);
@@ -2364,9 +2446,9 @@ ul.cci-br-ul {
         display: block;
         margin-right: 2.35765%;
         width: 100%; }
-        ul.cci-br-ul li.cci-br-li div.cci-br-status div.cci-br-detailed div:last-child {
+        ul.cci-br-ul li.cci-br-li div.cci-br-status div.cci-br-detailed > div:last-child {
           margin-right: 0; }
-        ul.cci-br-ul li.cci-br-li div.cci-br-status div.cci-br-detailed div.cci-br-status-cell {
+        ul.cci-br-ul li.cci-br-li div.cci-br-status div.cci-br-detailed > div.cci-br-status-cell {
           font-size: 13px;
           font-weight: bolder; }
       ul.cci-br-ul li.cci-br-li div.cci-br-status div.cci-br-detailed span.fa {

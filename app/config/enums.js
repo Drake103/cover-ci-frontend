@@ -5,6 +5,7 @@ var enums = {
     RUNNING: 2,
     PASSED: 3,
     FAILED: 4,
+    CANT_RUN: 5,
   }),
 };
 
