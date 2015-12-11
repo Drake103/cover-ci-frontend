@@ -1,0 +1,24 @@
+div.cci-br-test-info
+  div
+    p(class='header-text')
+      | {{testName}}    
+      span(ng-class='getStatusColorClass(testStep.status.code)')
+        i(class='fa status-icon', ng-class='getStepStatusIconClass(testStep.status.code)')
+    p 
+      span {{testStep.percentage}}%
+      span(ng-show='testStep.status.code === 5')
+        |    Status:
+        span(class='status-text',ng-class='getStatusColorClass(testStep.status.code)')
+          |   {{testStep.status.name}}
+  div(ng-hide='testStep.status.code === 5')
+    div.cci-test-chart
+  div(ng-hide='testStep.status.code === 5')
+    p
+      i(class='fa fa-square cci-status-passed')
+      |   {{testStep.info.passedCount}}
+    p
+      i(class='fa fa-square cci-status-failed')
+      |   {{testStep.info.failedCount}}
+    p
+      i(class='fa fa-hourglass-end')
+      |   {{testStep.duration}}

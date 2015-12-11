@@ -1,0 +1,21 @@
+
+<div ng-show="buildRun.isExpanded" class="cci-br-detailed">
+  <div class="cci-br-build-info">
+    <div>
+      <p class="header-text">Build  <span ng-class="getStatusColorClass(buildRun.buildStep.status.code)"><i ng-class="getStepStatusIconClass(buildRun.buildStep.status.code)" class="fa status-icon"></i></span></p>
+      <p>{{ buildRun.buildStep.timeStarted | date:'h:mm a' }}</p>
+    </div>
+    <div>
+      <div ng-class="getStatusColorClass(buildRun.buildStep.configurations[0].status.code)"><i ng-class="getBuildIconClass(buildRun.buildStep.configurations[0].status.code)" style="font-size: 3em;" class="fa"></i></div>
+      <p><a ng-href="buildRun.buildStep.configurations[0].packageLink">{{buildRun.buildStep.configurations[0].name}}</a></p>
+    </div>
+    <div>
+      <div ng-class="getStatusColorClass(buildRun.buildStep.configurations[1].status.code)"><i ng-class="getBuildIconClass(buildRun.buildStep.configurations[1].status.code)" style="font-size: 3em;" class="fa"></i></div>
+      <p><a ng-href="buildRun.buildStep.configurations[1].packageLink">{{buildRun.buildStep.configurations[1].name}}</a></p>
+    </div>
+  </div>
+  <div class="cci-separator"><i class="fa fa-angle-right"></i></div>
+  <div test-step-detailed="" test-step="buildRun.unitTestStep" test-name="{{&quot;Unit Test&quot;}}"></div>
+  <div class="cci-separator"><i class="fa fa-angle-right"></i></div>
+  <div test-step-detailed="" test-step="buildRun.functionalTestStep" test-name="{{&quot;Functional Test&quot;}}"></div>
+</div>
