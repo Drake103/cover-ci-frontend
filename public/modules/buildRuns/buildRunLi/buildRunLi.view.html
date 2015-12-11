@@ -26,9 +26,9 @@
 </div>
 <div class="cci-br-status">
   <div ng-hide="buildRun.isExpanded" class="cci-br-summary">
-    <div ng-class="getStatusColorClass(buildRun.status.code)" class="cci-br-status-cell"><span ng-class="getStatusIconClass(buildRun.status.code)" class="fa"></span> {{buildRun.status.name}}</div>
+    <div ng-class="getStatusColorClass(buildRun.status.code)" class="cci-br-status-cell"><span ng-class="getStatusIconClass(buildRun.status.code)" class="fa"></span>  {{buildRun.status.name}}</div>
   </div>
   <div ng-show="buildRun.isExpanded" class="cci-br-detailed">
-    <div ng-class="getStatusColorClass(buildRun.status.code)" class="cci-br-status-cell"><span ng-class="getStatusIconClass(buildRun.status.code)" class="fa"></span> {{buildRun.status.name}}</div>
+    <div ng-class="getStatusColorClass(buildRun.status.code)" class="cci-br-status-cell"><span style="font-size:1.5em;"><span ng-class="getStatusIconClass(buildRun.status.code)" class="fa"></span>  Build</span><br/>{{buildRun.status.name}}</div>
   </div>
 </div>

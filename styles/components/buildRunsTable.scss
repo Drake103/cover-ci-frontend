@@ -46,6 +46,10 @@ ul.cci-br-ul {
     font-weight: $header-font-weight;
   }
 
+  .header-text {
+    @include header-text();
+  }
+
   @mixin cell-padding {
     padding: 5px;
   }
@@ -202,50 +206,65 @@ ul.cci-br-ul {
       div.cci-br-detailed {
         @include clearfix;
 
+        .cci-separator {
+          .fa {
+            font-size: 2em;
+            color: $status-default-color;
+          }
+        }
+
+        .status-icon {
+          font-size: 1.2em;
+        }
+
         > div {
           @include cell-padding();
-
-          &:nth-child(1) {
-            @include span-columns(3.5);
-          }
-          &:nth-child(2) {
-            @include span-columns(0);
-          }
-          &:nth-child(3) {
-            @include span-columns(3.5);
-          }
-          &:nth-child(4) {
-            @include span-columns(0);
-          }
-          &:nth-child(5) {
-            @include span-columns(3.5);
-          }
+          display: block;
+          float: left;
 
           &.cci-br-build-info {
+            margin-left: 25px;
             > div {
+              display: block;
+              float: left;
+
               &:nth-child(1) {
-                @include span-columns(5);
+                width: 80px;
               }
               &:nth-child(2) {
-                @include span-columns(3);
+                width: 40px;
               }
               &:nth-child(3) {
-                @include span-columns(3);
+                width: 40px;
               }
             }
           }
 
-          &.cci-br-test-info {
+          .cci-br-test-info {
             > div {
+              display: block;
+              float: left;
+
               &:nth-child(1) {
-                @include span-columns(4);
+                max-width: 180px;
               }
               &:nth-child(2) {
-                @include span-columns(6);
+                margin: 10px;
               }
               &:nth-child(3) {
-                @include span-columns(2);
+                width: 50px;
               }
+            }
+
+            .cci-test-chart {
+              background-color: $status-passed-color;
+              width: 80px;
+              height: 80px;
+              border-radius: 50px;
+            }
+
+            .status-text {
+              font-size: 1.4em;
             }
           }
         }
@@ -273,6 +292,7 @@ ul.cci-br-ul {
       }
 
       div.cci-br-detailed {
+        height: $row-height;
         > div {
           @include vertical-align();
           @include span-columns(12);
@@ -284,6 +304,11 @@ ul.cci-br-ul {
 
         span.fa {
           font-size: 1.3em;
+        }
+
+        .cci-br-detailed {
+          background: whitesmoke;
+          border: 1px solid $status-default-color;
         }
       }
     }

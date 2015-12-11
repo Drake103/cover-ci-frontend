@@ -19,8 +19,11 @@
   .cci-br-summary(ng-hide='buildRun.isExpanded')
     div(class='cci-br-status-cell', ng-class='getStatusColorClass(buildRun.status.code)')
       span(class='fa', ng-class='getStatusIconClass(buildRun.status.code)')
-      |  {{buildRun.status.name}}
+      |   {{buildRun.status.name}}
   .cci-br-detailed(ng-show='buildRun.isExpanded')
     div(class='cci-br-status-cell', ng-class='getStatusColorClass(buildRun.status.code)')
-      span(class='fa', ng-class='getStatusIconClass(buildRun.status.code)')
-      |  {{buildRun.status.name}}
+      span(style='font-size:1.5em;')
+        span(class='fa', ng-class='getStatusIconClass(buildRun.status.code)')
+        |   Build
+      br
+      | {{buildRun.status.name}}

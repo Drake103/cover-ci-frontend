@@ -40,8 +40,8 @@
       },
       "unitTestStep": {
         "status": {
-          "code": 5,
-          "name": "Can't Run"
+          "code": 3,
+          "name": "Passed"
         },
         "timeStarted": 1449835200,
         "timeFinished": 1449835200,
@@ -75,13 +75,13 @@
       },
       "timeStarted": 1449835200,
       "status": {
-        "code": 1,
-        "name": "Pending"
+        "code": 2,
+        "name": "Running"
       },
       "buildStep": {
         "status": {
-          "code": 1,
-          "name": "Pending"
+          "code": 3,
+          "name": "Passed"
         },
         "timeStarted": 1449835200,
         "stepFinished": 1449835200,
@@ -98,8 +98,8 @@
           {
             "name": "release",
             "status": {
-              "code": 4,
-              "name": "Failed"
+              "code": 3,
+              "name": "Passed"
             },
             "packageLink": "http://google.com"
           }
@@ -107,8 +107,8 @@
       },
       "unitTestStep": {
         "status": {
-          "code": 5,
-          "name": "Can't Run"
+          "code": 3,
+          "name": "Passed"
         },
         "timeStarted": 1449835200,
         "stepFinished": 1449835200,
@@ -121,8 +121,8 @@
       },
       "functionalTestStep": {
         "status": {
-          "code": 5,
-          "name": "Can't Run"
+          "code": 2,
+          "name": "Running"
         },
         "timeStarted": 1449835200,
         "stepFinished": 1449835200,

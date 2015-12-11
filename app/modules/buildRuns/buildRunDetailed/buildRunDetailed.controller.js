@@ -11,6 +11,7 @@ class BuildRunDetailedController {
     this.$scope.getStatusIconClass = statusesHelper.getStatusIconClass;
     this.$scope.getStepStatusIconClass = statusesHelper.getStepStatusIconClass;
     this.$scope.getStatusColorClass = statusesHelper.getStatusColorClass;
+    this.$scope.getBuildIconClass = statusesHelper.getBuildIconClass;
   }
 }
 

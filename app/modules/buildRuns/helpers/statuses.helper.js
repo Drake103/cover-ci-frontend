@@ -62,9 +62,26 @@ function getStatusColorClass(statusCode) {
   return 'cci-status-default';
 }
 
+function getBuildIconClass(statusCode) {
+  switch (statusCode) {
+    case BuildRunStatusesEnum.PENDING:
+      return 'fa-folder-o';
+    case BuildRunStatusesEnum.RUNNING:
+      return 'fa-folder-o';
+    case BuildRunStatusesEnum.PASSED:
+      return 'fa-folder-o';
+    case BuildRunStatusesEnum.FAILED:
+      return 'fa-folder-o';
+    case BuildRunStatusesEnum.CANT_RUN:
+      return 'fa-folder-o';
+  }
+  return null;
+}
+
 export default {
   getStatusClassLi: getStatusClassLi,
   getStatusIconClass: getStatusIconClass,
   getStepStatusIconClass: getStepStatusIconClass,
   getStatusColorClass: getStatusColorClass,
+  getBuildIconClass: getBuildIconClass,
 };
